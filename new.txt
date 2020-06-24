@@ -1,2 +1,132 @@
-new1
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import { Link } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+
+import useStyles from "./style";
+
+
+function List() {
+
+    const classes = useStyles();
+    const [value, setValue] = React.useState(2);
+
+    return (
+        <Grid container className={classes.container} spacing={2} >
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Card className={classes.Cardfacebook}>
+                </Card>
+                <Card className={classes.Card}>
+                    <CardContent>
+                        <Typography variant={"h6"}>
+                            Containt
+                     </Typography>
+                        <Typography variant={"h6"}>
+                            60 Total Reviews
+                     </Typography>
+                    </CardContent>
+                    <CardActions>
+
+                        <Link href="#" className={classes.view} >
+                            View Listing
+                         </Link>
+                        <Grid item xs={4} />
+                        <Link href="#" className={classes.sync} >
+                            Synced
+                        </Link>
+                        {/* <IconButton aria-label="Add to favorites">
+                            <CheckCircleIcon />
+                        </IconButton> */}
+                        {/* <CheckCircleIcon color="primary">add_circle</CheckCircleIcon> */}
+                    </CardActions>
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Card className={classes.Cardgoogle}>
+                </Card>
+                <Card className={classes.Card}>
+                    <CardContent>
+                        <Typography variant={"h6"}>
+                            Containt
+                     </Typography>
+                        <Typography variant={"h6"}>
+                            60 Total Reviews
+                     </Typography>
+                        {/* <Rating
+                            name="simple-controlled"
+                            value={value}
+                            onChange={(event, newValue) => {
+                                setValue(newValue);
+                            }}
+                        /> */}
+                    </CardContent>
+                    <CardActions>
+                        <Link href="#" className={classes.view} >
+                            View Listing
+                         </Link>
+                        <Grid item xs={4} />
+                        <Link href="#" className={classes.error} >
+                            Error
+                        </Link>
+                    </CardActions>
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Card className={classes.Cardfoursquare}>
+                </Card>
+                <Card className={classes.Card}>
+                    <CardContent>
+                        <Typography variant={"h6"}>
+
+                        </Typography>
+                        <Typography variant={"h6"}>
+
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+
+                        <Link href="#" className={classes.connect} >
+                            Connect
+                         </Link>
+
+                    </CardActions>
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Card className={classes.CardBing}>
+                </Card>
+                <Card className={classes.Card}>
+                    <CardContent>
+                        <Typography variant={"h6"}>
+                            Containt
+                     </Typography>
+                        <Typography variant={"h6"}>
+                            60 Total Reviews
+                     </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Link href="#" className={classes.view} >
+                            View Listing
+                         </Link>
+                        <Grid item xs={4} />
+                        <Link href="#" className={classes.sync}>
+                            Synced
+                        </Link>
+                    </CardActions>
+                </Card>
+                
+            </Grid>
+        </Grid>
+    )
+
+}
+
+export default List;
 
